@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="flex justify-between  items-center p-4 text-xl">
+    <header className="container mx-auto flex justify-between items-center p-4 text-xl">
       <img src="vite.svg" className="h-12" alt="page-navigation" />
 
       <nav className="md:flex gap-2 md:gap-6 font-sm  text-[#F9FAFBaa] hidden capitalize ">
@@ -38,7 +38,7 @@ export default function Header() {
       {isOpen && (
         <>
           {/* mobile nav */}
-          <nav className="absolute left-0 top-0 z-[200] w-full h-screen flex flex-col gap-4 items-center justify-center text-2xl bg-[#141415] text-[#F9FAFBaa] md:hidden capitalize">
+          <nav className="absolute left-0 top-0 z-[200] w-full h-screen flex flex-col gap-4 items-center justify-center text-2xl bg-[#141415] text-[#F9FAFBaa] md:hidden capitalize  transition-all">
             <a className="hover:text-white" href="#">
               Home
             </a>

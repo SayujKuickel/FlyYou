@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="mt-32">
       <div
-        className="w-full md:mx-auto md:w-[90%] lg:w-[75vw] bg-[#141415] md:rounded-2xl 
+        className="container mx-auto bg-[#141415] md:rounded-2xl 
                   grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4
                   p-3 md:p-6 lg:p-10
       "
@@ -15,7 +15,7 @@ export default function Footer() {
           <img src="fly-youlogo.png" className="h-12" alt="" />
         </div>
 
-        <ul className="flex flex-col gap-3">
+        <ul className="flex flex-col gap-3 mt-6 md:mt-0">
           <li>
             <h3 className="uppercase font-bold">Quick Links</h3>
           </li>
@@ -36,7 +36,7 @@ export default function Footer() {
           </li>
         </ul>
 
-        <ul className="flex flex-col gap-3">
+        <ul className="flex flex-col gap-3 mt-6 md:mt-0">
           <li>
             <h3 className="uppercase font-bold">projects</h3>
           </li>
@@ -52,7 +52,7 @@ export default function Footer() {
         </ul>
 
         <div>
-          <h2 className="text-2xl font-bold">Follow us</h2>
+          <h2 className="text-2xl font-bold mt-6 md:mt-0">Follow us</h2>
           <div className="flex gap-3 my-4">
             <a href="">
               <img

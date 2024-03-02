@@ -11,11 +11,11 @@ export default function App() {
       <div className="bg-black text-white">
         <Header />
 
-        <div className="max-w-[858px] mx-auto mt-14 text-center ">
+        <div className="container mx-auto mt-14 text-center ">
           <h1 className="text-6xl md:text-8xl text-[300] mb-8">
             Culture & Career
           </h1>
-          <p className=" text-[#FFFFFFB2] text-24 w-[90%] mx-auto font-normal leading-6 tracking-wide text-center ">
+          <p className=" text-[#FFFFFFB2] text-xl w-2/3  mx-auto font-normal leading-6 tracking-wide text-center ">
             We're a diverse team fluent in Japanese, Chinese, Hindi, and
             English. Specializing in recruitment, registration support, online
             shop management, and English conversation services. Our mission is
@@ -39,28 +39,32 @@ export default function App() {
           <div className="w-56 h-56 md:w-96 md:h-96  bg-[#FF0010] absolute blur-3xl opacity-50 z-0 rounded-full -bottom-4 right-60"></div>
 
           {/* gradient overlay */}
-          <div className="max-w-[1200px] max-h-[615px] p-4 mx-10 md:mx-auto z-20 relative  object-cover rounded-b-lg  overflow-hidden ">
-            <img src="./hero-image.jpg" alt="hero-image" />
+          <div className="max-h-[615px] container mx-auto z-20 relative rounded-3xl overflow-hidden ">
+            <img
+              src="./hero-image.jpg"
+              alt="hero-image"
+              className="object-cover w-full h-full"
+            />
           </div>
         </section>
 
         {/* div for black background */}
       </div>
 
-      <div className="container mx-auto my-20">
-        <div className="grid lg:grid-cols-2 w-full md:w-[80vw] mx-auto">
-          <h2 className="text-5xl md:text-8xl font-bold mb-5">Our Projects</h2>
+      <section className="container mx-auto flex flex-col md:flex-row md:items-start md:justify-between gap-4  mt-32">
+        <h2 className="text-5xl md:text-8xl font-bold -mb-1 flex-1">
+          Our Projects
+        </h2>
 
-          <p className="text-xl">
-            Our aim is to help rural areas in Japan by bringing in young talent
-            from overseas and contributing to the country's development.{" "}
-            <span className="block w-fit border border-blue-500  px-4 py-5 rounded-lg m-2 mt-5 ">
-              {/* bottom arrow */}
-              &#10515;
-            </span>
-          </p>
-        </div>
-      </div>
+        <p className="text-xl flex-1">
+          Our aim is to help rural areas in Japan by bringing in young talent
+          from overseas and contributing to the country's development.
+          <span className="block w-fit border border-blue-500  px-4 py-5 rounded-lg m-2 mt-5 ">
+            {/* bottom arrow */}
+            &#10515;
+          </span>
+        </p>
+      </section>
 
       {/* supports */}
       <Projects projects={projects} />
