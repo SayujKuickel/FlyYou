@@ -52,7 +52,7 @@ export default function Footer() {
         </ul>
 
         <div>
-          <h2 className="text-2xl font-bold mt-6 md:mt-0">Follow us</h2>
+          <h2 className="text-2xl font-bold mt-6 md:mt-0">Our Social Links</h2>
           <div className="flex gap-3 my-4">
             <a href="">
               <img
@@ -67,6 +67,7 @@ export default function Footer() {
               />
             </a>
           </div>
+          <div id="google_translate_element"></div>
         </div>
       </div>
     </footer>
