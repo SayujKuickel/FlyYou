@@ -5,10 +5,13 @@ import Articles from "./components/Articles.jsx";
 import Footer from "./components/FooterComponent.jsx";
 import Header from "./components/Header.jsx";
 
+// image
+import HeroImage from "./Assets/hero-image.jpg";
+
 export default function App() {
   return (
     <>
-      <div className="bg-black text-white">
+      <main className="bg-black text-white">
         <Header />
 
         <div className="container mx-auto mt-14 text-center ">
@@ -41,7 +44,7 @@ export default function App() {
           {/* gradient overlay */}
           <div className="max-h-[615px] container mx-auto z-20 relative rounded-3xl overflow-hidden ">
             <img
-              src="./hero-image.jpg"
+              src={HeroImage}
               alt="hero-image"
               className="object-cover w-full h-full"
             />
@@ -49,7 +52,7 @@ export default function App() {
         </section>
 
         {/* div for black background */}
-      </div>
+      </main>
 
       <section className="container mx-auto flex flex-col md:flex-row md:items-start md:justify-between gap-4  mt-32">
         <h2 className="text-5xl md:text-8xl font-bold -mb-1 flex-1">
