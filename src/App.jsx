@@ -1,5 +1,5 @@
 import { projects, articles } from "./constants.js";
-import CtaButton from "./components/CtaButton.jsx";
+import Button from "./components/Button.jsx";
 import Projects from "./components/Projects.jsx";
 import Articles from "./components/Articles.jsx";
 import Footer from "./components/FooterComponent.jsx";
@@ -18,6 +18,7 @@ export default function App() {
           <h1 className="text-6xl md:text-8xl text-[300] mb-8">
             Culture & Career
           </h1>
+
           <p className=" text-[#FFFFFFB2] text-xl w-2/3  mx-auto font-normal leading-6 tracking-wide text-center ">
             We're a diverse team fluent in Japanese, Chinese, Hindi, and
             English. Specializing in recruitment, registration support, online
@@ -26,7 +27,10 @@ export default function App() {
             talent shortage for Japan's development. Join us in making a
             meaningful impact.
           </p>
-          <CtaButton>Contact Us</CtaButton>
+
+          <Button type="primary" alignment="center">
+            Contact Us
+          </Button>
         </div>
 
         {/* gradient section */}
@@ -80,7 +84,9 @@ export default function App() {
           </h2>
 
           <Articles articles={articles} />
-          <CtaButton>Read all blogs</CtaButton>
+          <Button url="/contact" alignment="center">
+            Read all blogs
+          </Button>
         </section>
 
         <Footer />

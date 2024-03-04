@@ -23,21 +23,20 @@ export default function Footer() {
               Quick Links
             </h2>
           </li>
-
-          <li className="text-[#F9FAFBaa]">
-            <a href="">Company</a>
+          <li className="hover:text-white">
+            <a href="">Lorem.</a>
           </li>
-          <li className="text-[#F9FAFBaa]">
-            <a href="">Articles</a>
+          <li className="hover:text-white">
+            <a href="">Ut?</a>
           </li>
-          <li className="text-[#F9FAFBaa]">
-            <a href="">Contacts</a>
+          <li className="hover:text-white">
+            <a href="">Nostrum!</a>
           </li>
-          <li className="text-[#F9FAFBaa]">
-            <a href="">Recuritment</a>
+          <li className="hover:text-white">
+            <a href="">Aut.</a>
           </li>
-          <li className="">
-            <a href="">Privacy Policy</a>
+          <li className="hover:text-white">
+            <a href="">Quasi.</a>
           </li>
         </ul>
 

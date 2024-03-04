@@ -6,7 +6,7 @@ import "./index.css";
 
 //
 import App from "./App.jsx";
-import RegisteredSupportOrganization from "./Pages/ABSEnglishConversation.jsx";
+import RegisteredSupportOrganization from "./Pages/RegisteredSupportOrganization.jsx";
 import NamasteRecruit from "./Pages/NamasteRecruit.jsx";
 import ABSEnglishConversation from "./Pages/ABSEnglishConversation.jsx";
 import About from "./Pages/About.jsx";

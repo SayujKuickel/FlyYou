@@ -1,16 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Projects({ projects }) {
   return (
-    <ul className="container flex flex-col gap-12 md:gap-4 mx-auto my-20">
+    <ul className="container flex flex-col gap-12 md:gap-12 mx-auto my-20">
       {projects.map((project) => (
-        <li className="flex items-center justify-between flex-col md:flex-row">
-          <div className="flex-1 py-4 px-2">
+        <li className="flex items-center justify-between gap-1 md:gap-10 flex-col md:flex-row md:even:flex-row-reverse">
+          <div className="flex-1 md:py-4 px-2">
             <h2 className="text-3xl font-semibold md:text-4xl mb-4 max-w-[22ch]">
               {project.title}
             </h2>
             <p className="max-w-[64ch]">{project.description}</p>
-            <p className="text-blue-600 mt-6">Learn More</p>
+            {project.link && (
+              <Link
+                to={project.link}
+                className="text-blue-600 block w-fit my-3 hover:-translate-y-1 pr-2 py-2 transition-transform "
+              >
+                Learn More &#8599;
+              </Link>
+            )}
           </div>
 
           <div className="flex-1 h-[18rem] rounded-md overflow-hidden">

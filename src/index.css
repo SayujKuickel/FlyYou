@@ -3,6 +3,7 @@
 body {
   font-family: "Jost", sans-serif;
   font-style: normal;
+  color-scheme: dark;
 }
 
 @tailwind base;
@@ -22,7 +23,15 @@ body {
   #google_translate_element select {
     @apply py-2 pl-2 pr-8 mb-4 bg-black outline-none border-2 border-gray-800;
   }
+  .contact-form input,
+  textarea,
+  select {
+    @apply outline-none bg-black pl-1 py-2 border-b-white border-b-2 text-white/75 placeholder:text-white/75 focus-within:bg-gray-800/10;
+  }
+  .contact-form textarea {
+    resize: none;
+  }
   .container {
-    @apply px-4;
+    @apply px-2;
   }
 }
