@@ -5,12 +5,12 @@ export default function Projects({ projects }) {
   return (
     <ul className="container flex flex-col gap-12 md:gap-12 mx-auto my-20">
       {projects.map((project) => (
-        <li className="flex items-center justify-between gap-1 md:gap-10 flex-col md:flex-row md:even:flex-row-reverse">
+        <li className="flex items-center justify-between mt-8 md:mt-0 gap-1 md:gap-10 flex-col md:flex-row md:even:flex-row-reverse">
           <div className="flex-1 md:py-4 px-2">
             <h2 className="text-3xl font-semibold md:text-4xl mb-4 max-w-[22ch]">
               {project.title}
             </h2>
-            <p className="max-w-[64ch]">{project.description}</p>
+            <p className="max-w-[64ch] md:text-xl">{project.description}</p>
             {project.link && (
               <Link
                 to={project.link}

@@ -1,8 +1,9 @@
-import Footer from "../components/FooterComponent";
+import Features from "../components/Features";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Projects from "../components/Projects";
 
-import { supportOrganization, howWeWork } from "../constants";
+import { RSOLayout, RSOFeatures, services } from "../constants";
 
 export default function RegisteredSupportOrganization() {
   return (
@@ -10,41 +11,35 @@ export default function RegisteredSupportOrganization() {
       <Header />
 
       <div className="container mx-auto">
-        <Projects projects={supportOrganization} />
+        <Projects projects={RSOLayout} />
 
         <div className="text-center mt-[10rem]">
-          <h2 className="text-6xl lg:text-8xl font-bold mt-6 md:mt-0">
+          <h2 className="text-4xl lg:text-8xl font-bold mt-6 md:mt-0">
             FlyYou Incorporated
           </h2>
-          <h2 className="text-base md:text-xl lg:text-2xl font-light mt-6 md:mt-0">
+          <h3 className="text-base md:text-xl lg:text-2xl font-light mt-6 md:mt-0">
             Bridging Cultures and Building Futures
-          </h2>
+          </h3>
+
+          <ul className="flex flex-wrap justify-center my-10 gap-4 md:gap-8">
+            {services.map((service) => (
+              <li className="w-52 aspect-square flex flex-col gap-2">
+                <div className="w-full rounded-full bg-gray-800/20 p-2 aspect-square grid place-items-center">
+                  <img
+                    src={service.url}
+                    alt={`id for ${service.url}`}
+                    className="invert-[70%] hue-rotate-[200deg]"
+                  />
+                </div>
+                <span className="text-xl">{service.name}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <h2 className="text-4xl lg:text-6xl mt-32">How we Work?</h2>
-        <ul className="mt-10 flex flex-wrap gap-10 justify-between">
-          {howWeWork.map((item) => (
-            <li
-              key={item.id}
-              className=" lg:w-[38rem] p-4 md:p-8 rounded-md relative"
-            >
-              <p className=" absolute z-10 top-2 left-1 opacity-30 flex flex-col text-center">
-                <span className="text-4xl font-semibold">Step</span>
-                <span className="text-7xl font-bold  -translate-y-2">
-                  {item.id < 10 ? `0${item.id}` : item.id}
-                </span>
-              </p>
-              <div className=" ml-24 relative">
-                <h2 className="text-4xl font-semibold mb-4 opacity-95">
-                  {item.title}
-                </h2>
-                <p className="text-xl text-[#F9FAFBaa]">{item.body}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <Features features={RSOFeatures} />
       </div>
-      <div className="my-[100vh] block"></div>
       <Footer />
     </main>
   );

@@ -49,7 +49,7 @@ export default function Header() {
         </div>
 
         <Link className="hover:text-white" to="/about">
-          About
+          Company
         </Link>
         <Link className="hover:text-white" to="/contact">
           Contact

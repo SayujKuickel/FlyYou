@@ -1,5 +1,6 @@
 import HeroImage from "./Assets/hero-image.jpg";
 
+// Home page
 export const projects = [
   {
     id: 1,
@@ -24,8 +25,7 @@ export const projects = [
   },
 ];
 
-// articles;
-//
+// articles for home page
 export const articles = [
   {
     id: 1,
@@ -45,9 +45,8 @@ export const articles = [
 ];
 
 //
-// /project/registered_support_organicattion
-//
-export const supportOrganization = [
+// registered_support_organicattion
+export const RSOLayout = [
   {
     id: 1,
     title: "Registered Support Organization",
@@ -68,7 +67,8 @@ export const supportOrganization = [
   },
 ];
 
-export const howWeWork = [
+// registered service organization
+export const RSOFeatures = [
   {
     id: 1,
     title: "Implementation of advance guidance.",
@@ -119,5 +119,190 @@ export const howWeWork = [
     id: 10,
     title: "Interviews and reports to administrative agencies",
     body: "We will conduct regular interviews with foreigners and their superiors.",
+  },
+];
+
+// RSO Services
+import Agriculture from "./Assets/icons/1188086.png";
+import Accommodation from "./Assets/icons/5241697.png";
+import Aviation from "./Assets/icons/4230843.png";
+import Construction from "./Assets/icons/2204128.png";
+import FoodServiceIndustry from "./Assets/icons/3575841.png";
+import BuildingCareIndustry from "./Assets/icons/6454118.png";
+import FabricatedMaterialsIndustry from "./Assets/icons/9170887.png";
+import AutomobileMaintenanceIndustry from "./Assets/icons/4879657.png";
+import ShipbuildingAndShipbuilding from "./Assets/icons/7029741.png";
+import IndustrialMachineryManufacturingIndustry from "./Assets/icons/1186305.png";
+import FoodAndBeverageManufacturingIndustry from "./Assets/icons/3572470.png";
+import ElectricalElectronicAndInformationIndustries from "./Assets/icons/3572470.png";
+import NursingCareIndustry from "./Assets/icons/1165491.png";
+
+export const services = [
+  {
+    id: 1,
+    name: "Agriculture",
+    url: Agriculture,
+  },
+  {
+    id: 2,
+    name: "Accommodation",
+    url: Accommodation,
+  },
+  {
+    id: 3,
+    name: "Aviation",
+    url: Aviation,
+  },
+  {
+    id: 4,
+    name: "Construction",
+    url: Construction,
+  },
+  {
+    id: 5,
+    name: "Food Service Industry",
+    url: FoodServiceIndustry,
+  },
+  {
+    id: 6,
+    name: "Building Care Industry",
+    url: BuildingCareIndustry,
+  },
+  {
+    id: 7,
+    name: "Fabricated Materials Industry",
+    url: FabricatedMaterialsIndustry,
+  },
+  {
+    id: 8,
+    name: "Automobile Maintenance Industry",
+    url: AutomobileMaintenanceIndustry,
+  },
+  {
+    id: 9,
+    name: "Shipbuilding And Shipbuilding",
+    url: ShipbuildingAndShipbuilding,
+  },
+  {
+    id: 10,
+    name: "Industrial Machinery Manufacturing Industry",
+    url: IndustrialMachineryManufacturingIndustry,
+  },
+  {
+    id: 11,
+    name: "Food And Beverage Manufacturing Industry",
+    url: FoodAndBeverageManufacturingIndustry,
+  },
+  {
+    id: 12,
+    name: "Electrical, Electronic, And Information Industries",
+    url: ElectricalElectronicAndInformationIndustries,
+  },
+  {
+    id: 13,
+    name: "Nursing Care Industry",
+    url: NursingCareIndustry,
+  },
+];
+
+// Namaste Recuit
+
+export const NamasteRecruitLayout = [
+  {
+    id: 1,
+    title: "What is Namaste Recruit?",
+    description: `Namasute Recruit connects Nepalese and South Asian individuals, often termed 'foreigners,' with companies seeking a diverse workforce. Our mission crafts tailored opportunities for job seekers and employers. We stand out with a fee structure tied to successful recruitment. Namasute Recruit means accessing talent and fostering inclusivity in your career or organization.`,
+    image: HeroImage,
+  },
+  {
+    id: 2,
+    title: "Connecting Foreign Talent with Opportunity",
+    description: `Our unwavering commitment lies in the art of crafting employment opportunities that not only match but also exceed the specific wishes, goals, and strategic needs of companies looking to harness the exceptional talents and unique perspectives of foreign human resources.`,
+    image: HeroImage,
+  },
+  {
+    id: 3,
+    title: "Zero-Cost Recruitment Success",
+    description: `Our innovative recruitment model centers on a revolutionary zero-cost framework. Companies achieve their hiring goals risk-free until we meet their staffing needs. This approach underscores our dedication to your success, aligning our interests for mutual benefit. This cost-effective strategy empowers you to explore a diverse workforce and global talent pool without upfront expenses.`,
+    image: HeroImage,
+  },
+];
+
+export const NamasteFeatures = [
+  {
+    id: 1,
+    title: "Low Risk",
+    body: "Recruitment through job advertisement media incurs costs from the recruitment stage.Namaste Recruit is a complete success fee type, so the cost until successful recruitment is 0 yen.For details, please refer to 'Service Fee'.",
+  },
+  {
+    id: 2,
+    title: "Japanese Proficiency",
+    body: "We have people from level N1 to N4 at Japanese. We can introduce human resources that meet the Japanese level you are looking for.",
+  },
+  {
+    id: 3,
+    title: "Age Range",
+    body: "Age range Most of the job seekers employed at our company are in their 20s ~ early 30s. We will also introduce this according to your request.",
+  },
+  {
+    id: 4,
+    title: "After Sales",
+    body: "After-sales follow-up We will also fully support the follow-up after joining the company, such as choosing a residence for the hire. If you have any problems, please contact us at any time.",
+  },
+  {
+    id: 5,
+    title: "Refund Service",
+    body: "Refund Service if you retire within the period specified by us, we will refund a certain amount of money based on our refund policy.",
+  },
+];
+
+//
+// ABS PAGE
+export const ABSLayout = [
+  {
+    id: 1,
+    title: "What is ABS English?",
+    description: `ABS English consists of Filipino instructors who have taught English to Korean, Taiwanese, Chinese, Vietnamese and Japan people. We introduce teachers that are suitable for each student, so even beginners can learn English with peace of mind.`,
+    image: HeroImage,
+  },
+  {
+    id: 1,
+    title: "What kind of people are the teachers?",
+    description: `ABS English is a distinguished team of highly skilled Filipino teachers who possess a wealth of experience in teaching English to a diverse range of students, including Koreans, Taiwanese, Chinese, Vietnamese, and Japanese individuals. Our dedicated instructors are well-equipped to provide top-notch language education tailored to the unique needs and backgrounds of each learner, ensuring a comprehensive and effective English language learning experience.`,
+    image: HeroImage,
+  },
+  {
+    id: 1,
+    title: "What is the atmosphere like in the class?",
+    description: `English is a type of communication tool, so I have lessons with the motto of having fun while learning rather than studying.We will thoroughly interview the students before the lesson and select the appropriate teacher.`,
+    image: HeroImage,
+  },
+];
+
+export const ABSFeatures = [
+  {
+    id: 1,
+    title: "Low Risk",
+    body: "Recruitment through job advertisement media incurs costs from the recruitment stage.Namaste Recruit is a complete success fee type, so the cost until successful recruitment is 0 yen.For details, please refer to 'Service Fee'.",
+  },
+  {
+    id: 2,
+    title: "Japanese Proficiency",
+    body: "We have people from level N1 to N4 at Japanese. We can introduce human resources that meet the Japanese level you are looking for.",
+  },
+  {
+    id: 3,
+    title: "Age Range",
+    body: "Age range Most of the job seekers employed at our company are in their 20s ~ early 30s. We will also introduce this according to your request.",
+  },
+  {
+    id: 4,
+    title: "After Sales",
+    body: "After-sales follow-up We will also fully support the follow-up after joining the company, such as choosing a residence for the hire. If you have any problems, please contact us at any time.",
+  },
+  {
+    id: 5,
+    title: "Refund Service",
+    body: "Refund Service if you retire within the period specified by us, we will refund a certain amount of money based on our refund policy.",
   },
 ];

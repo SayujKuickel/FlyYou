@@ -2,11 +2,12 @@ import { projects, articles } from "./constants.js";
 import Button from "./components/Button.jsx";
 import Projects from "./components/Projects.jsx";
 import Articles from "./components/Articles.jsx";
-import Footer from "./components/FooterComponent.jsx";
+import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 
 // image
 import HeroImage from "./Assets/hero-image.jpg";
+import { Link } from "react-router-dom";
 
 export default function App() {
   return (
@@ -28,8 +29,8 @@ export default function App() {
             meaningful impact.
           </p>
 
-          <Button type="primary" alignment="center">
-            Contact Us
+          <Button type="primary" alignment="center" classes="mt-10">
+            <Link to="/contact">Contact Us</Link>
           </Button>
         </div>
 
@@ -66,7 +67,7 @@ export default function App() {
         <p className="text-xl flex-1">
           Our aim is to help rural areas in Japan by bringing in young talent
           from overseas and contributing to the country's development.
-          <span className="block w-fit border border-blue-500  px-4 py-5 rounded-lg m-2 mt-5 ">
+          <span className="block w-fit border border-blue-500  px-4 py-5 rounded-full mt-2 scale-y-[.75]">
             {/* bottom arrow */}
             &#10515;
           </span>
@@ -84,9 +85,12 @@ export default function App() {
           </h2>
 
           <Articles articles={articles} />
-          <Button url="/contact" alignment="center">
-            Read all blogs
-          </Button>
+
+          <Link to="/articles" className="block w-fit mx-auto mt-14">
+            <Button type="primary" alignment="center">
+              Read all blogs
+            </Button>
+          </Link>
         </section>
 
         <Footer />

@@ -1,4 +1,4 @@
-import Footer from "../components/FooterComponent";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import React, { useState } from "react";
 import Button from "../components/Button";
@@ -33,7 +33,7 @@ export default function Contact() {
 
     for (const key in formData) {
       if (formData.hasOwnProperty(key) && formData[key].trim() === "") {
-        console.log("Please fill in all the form fields.");
+        alert("Please fill in all the form fields.");
         return;
       }
     }
@@ -43,20 +43,20 @@ export default function Contact() {
       isNaN(formData.phoneNumber.trim()) ||
       formData.phoneNumber.trim().length !== 10
     ) {
-      console.log("Please enter a valid 10-digit contact number.");
+      alert("Please enter a valid 10-digit contact number.");
       return;
     }
 
     // Check if age is valid
     const age = parseInt(formData.age);
     if (isNaN(age) || age < 0 || age > 100) {
-      console.log("Please enter a valid age.");
+      alert("Please enter a valid age.");
       return;
     }
 
     // If all checks pass, you can proceed
     setFormData(intialFormState);
-    console.log(formData);
+    alert(formData);
   }
 
   return (
