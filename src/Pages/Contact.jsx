@@ -70,10 +70,10 @@ export default function Contact() {
             </h1>
           </div>
 
-          <section className="self-center justify-self-center flex gap-2 md:gap-10 flex-col md:flex-row">
+          <section className="self-center justify-self-center grid grid-cols-2 gap-2">
             <div className="flex flex-col items-center justify-center">
               <img src={x} className="w-full h-full max-w-96" />
-              <p className="text-center text-3xl font-semibold mt-2">
+              <p className="text-center text-xl md:text-3xl font-semibold mt-2">
                 Anup Poudel
               </p>
               <p className="ea">+977-9856895868</p>
@@ -81,7 +81,7 @@ export default function Contact() {
 
             <div className="flex flex-col items-center justify-center">
               <img src={x} className="w-full h-full max-w-96" />
-              <p className="text-center text-3xl font-semibold mt-2">
+              <p className="text-center text-xl md:text-3xl font-semibold mt-2">
                 Anup Poudel
               </p>
               <p className="ea">+977-9856895868</p>

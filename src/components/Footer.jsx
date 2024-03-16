@@ -7,47 +7,71 @@ import Button from "./Button";
 
 import { Link } from "react-router-dom";
 
-export default function Footer() {
+const plans = [
+  {
+    id: 1,
+    title_en: "Curious about our pricing?",
+    title_jp: "料金プランについて知りたいですか？",
+    description_en: "We offer variety of plans. Click Below to contact us.",
+    description_jp:
+      "私たちはさまざまなプランを提供しています。下記をクリックしてご連絡ください。",
+    link: "/contact",
+    btnText: "Contact us",
+  },
+  {
+    id: 2,
+    title_en: "Wanna Know More About Our Company?",
+    title_jp: "当社について詳しく知りたいですか？",
+
+    description_en: "Please Follow the below link to see our company profile.",
+    description_jp: "下記のリンクをクリックして、会社の概要をご覧ください。",
+    link: "/about",
+    btnText: "Company Profile",
+  },
+  {
+    id: 3,
+    title_en: "Looking for a job?",
+    title_jp: "求人情報をお探しですか？",
+    description_en:
+      "We have various of offerings per your need. Please follow the link to view our offerings.",
+    description_jp:
+      "私たちはあなたのニーズに合ったさまざまなサービスを提供しています。下記のリンクをクリックして、サービス内容をご覧ください。",
+    link: "/",
+    btnText: "Recruitment",
+  },
+];
+
+export default function Footer({ pageLang = "en" }) {
   return (
     <>
       <div className="mt-36"></div>
-      <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-16">
-        <div className="h-full flex flex-col gap-8 justify-between">
-          <div>
-            <h3 className="text-2xl font-semibold md:text-3xl">
-              Curious about our pricing?
-            </h3>
-            <p>We offer variety of plans. Click Below to contact us.</p>
-          </div>
-          <Button type="primary">
-            <Link to="/contact">Contact us</Link>
-          </Button>
-        </div>
-        <div className="h-full flex flex-col gap-8 justify-between">
-          <div>
-            <h3 className="text-2xl font-semibold md:text-3xl">
-              Wanna Know More About Our Company?
-            </h3>
-            <p>Please Follow the below link to see our company profile.</p>
-          </div>
-          <Button type="primary" classes="my-0">
-            <Link to="/about">Company Profile</Link>
-          </Button>
-        </div>
-        <div className="md:col-span-2 lg:col-span-1 h-full flex flex-col gap-8 justify-between">
-          <div>
-            <h3 className="text-xl font-semibold md:text-3xl">
-              Looking for a job?
-            </h3>
-            <p>
-              We have various of offerings per your need. Please follow the link
-              to view our offerings.
-            </p>
-          </div>
-          <Button type="primary">
-            <Link to="/">Recruitment</Link>
-          </Button>
-        </div>
+      <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-5 my-16">
+        {plans.map(
+          ({
+            id,
+            title_en,
+            description_en,
+            title_jp,
+            description_jp,
+            link,
+            btnText,
+          }) => (
+            <div
+              key={id}
+              className="h-full flex flex-col gap-4 md:gap-8 justify-between"
+            >
+              <div>
+                <h3 className="text-2xl font-semibold md:text-3xl">
+                  {pageLang === "en" ? title_en : title_jp}
+                </h3>
+                <p>{pageLang === "en" ? description_en : description_jp}</p>
+              </div>
+              <Button type="primary" className="m-0 scale-[.95]">
+                <Link to={link}>{btnText}</Link>
+              </Button>
+            </div>
+          )
+        )}
       </section>
       {/* FOOTER */}
       <footer>
@@ -137,7 +161,6 @@ export default function Footer() {
                 />
               </a>
             </div>
-            <div id="google_translate_element"></div>
           </div>
         </div>
       </footer>

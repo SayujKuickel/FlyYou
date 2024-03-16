@@ -1,16 +1,19 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-
 import Logo from "../Assets/FlyYouLogo.png";
+import { useState } from "react";
 
-export default function Header() {
+export default function Header({ pageLang, handlePageLang }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
+  console.log(pageLang);
+
   return (
     <header className="container mx-auto flex justify-between items-center p-4 text-xl">
-      <img src={Logo} className="h-12" alt="page-navigation" />
+      <Link to="/">
+        <img src={Logo} className="h-12" alt="page-navigation" />
+      </Link>
 
       <nav className="md:flex gap-2 md:gap-6 font-sm  text-[#F9FAFBaa] hidden capitalize ">
         <Link className="hover:text-white" to="/">
@@ -55,6 +58,16 @@ export default function Header() {
           Contact
         </Link>
       </nav>
+
+      <select
+        name="lang_translate"
+        id="lang_translate"
+        value={pageLang}
+        onChange={(e) => handlePageLang(e.target.value)}
+      >
+        <option value="en">English</option>
+        <option value="jp">Japanese</option>
+      </select>
 
       <button
         className="block md:hidden absolute z-[201] right-4 top-4"

@@ -1,51 +1,57 @@
+// <registered_support_organicattion>
+import Agriculture from "./Assets/icons/1188086.png";
+import Accommodation from "./Assets/icons/5241697.png";
+import Aviation from "./Assets/icons/4230843.png";
+import Construction from "./Assets/icons/2204128.png";
+import FoodServiceIndustry from "./Assets/icons/3575841.png";
+import BuildingCareIndustry from "./Assets/icons/6454118.png";
+import FabricatedMaterialsIndustry from "./Assets/icons/9170887.png";
+import AutomobileMaintenanceIndustry from "./Assets/icons/4879657.png";
+import ShipbuildingAndShipbuilding from "./Assets/icons/7029741.png";
+import IndustrialMachineryManufacturingIndustry from "./Assets/icons/1186305.png";
+import FoodAndBeverageManufacturingIndustry from "./Assets/icons/3572470.png";
+import ElectricalElectronicAndInformationIndustries from "./Assets/icons/3572470.png";
+import NursingCareIndustry from "./Assets/icons/1165491.png";
+// </ registered_support_organicattion>
+
 import HeroImage from "./Assets/hero-image.jpg";
 
-// Home page
+// <Home page>
 export const projects = [
   {
     id: 1,
-    title: "Registered Support Organization",
-    description: `We speak Chinese, Japanese, English, Hindi and Nepali. We always have more than 100 people registered, so we will select the right person for your company.`,
+    title_en: "Registered Support Organization",
+    title_jp: "登録支援機関",
+    description_en: `We speak Chinese, Japanese, English, Hindi and Nepali. We always have more than 100 people registered, so we will select the right person for your company.`,
+    description_jp: `私たちは中国語、日本語、英語、ヒンディー語、ネパール語を話します。常時100名以上が登録しておりますので、貴社に最適な人材をご提案させていただきます。`,
     image: HeroImage,
     link: "/projects/registered_support_organization",
   },
   {
     id: 2,
-    title: "Namaste Recruit",
-    description: `Namasute Recruit is a specialized human resource matching service connecting "foreigners" with "companies seeking foreign talent," with a focus on Nepalese and South Asians. Our goal is to create employment opportunities that align with the company's needs.`,
+    title_en: "Namaste Recruit",
+    title_jp: `ナマステリクルート`,
+    description_en: `Namasute Recruit is a specialized human resource matching service connecting "foreigners" with "companies seeking foreign talent," with a focus on Nepalese and South Asians. Our goal is to create employment opportunities that align with the company's needs.`,
+    description_jp: `ナマステリクルートは、ネパール人・南アジア人を中心とした「外国人」と「外国人材を求める企業」をつなぐ専門人材マッチングサービスです。私たちの目標は、企業のニーズに合った雇用機会を創出することです。`,
     image: HeroImage,
     link: "/projects/namaste_recruit",
   },
   {
     id: 3,
-    title: "ABS English Conversation",
-    description: `ABS English consists of Filipino instructors experienced in teaching English to Koreans, Taiwanese, Chinese, Vietnamese, and Japanese individuals. We'll match you with a suitable teacher, ensuring that even beginners can learn English comfortably and confidently.`,
+    title_en: "ABS English Conversation",
+    title_jp: `ABS 英会話`,
+    description_en: `ABS English consists of Filipino instructors experienced in teaching English to Koreans, Taiwanese, Chinese, Vietnamese, and Japanese individuals. We'll match you with a suitable teacher, ensuring that even beginners can learn English comfortably and confidently.`,
+    description_jp: `ABS English は、韓国人、台湾人、中国人、ベトナム人、日本人に英語を教えた経験のあるフィリピン人講師で構成されています。初心者でも安心して快適に英語を学べるよう、あなたに合った講師をご紹介します。`,
     image: HeroImage,
     link: "/projects/abs_english_conversation",
   },
 ];
-
-// articles for home page
-export const articles = [
-  {
-    id: 1,
-    title: `FLYYOU Co., Ltd.: Bridging Gaps, Creating Opportunities"`,
-    image: HeroImage,
-  },
-  {
-    id: 2,
-    title: `ABS English: Tailored Learning for Every Student`,
-    image: HeroImage,
-  },
-  {
-    id: 3,
-    title: `Namasute Recruit: Connecting Global Talent and Companies`,
-    image: HeroImage,
-  },
-];
+// </Home page>
 
 //
-// registered_support_organicattion
+//
+
+// <registered_support_organicattion>
 export const RSOLayout = [
   {
     id: 1,
@@ -67,7 +73,6 @@ export const RSOLayout = [
   },
 ];
 
-// registered service organization
 export const RSOFeatures = [
   {
     id: 1,
@@ -121,21 +126,6 @@ export const RSOFeatures = [
     body: "We will conduct regular interviews with foreigners and their superiors.",
   },
 ];
-
-// RSO Services
-import Agriculture from "./Assets/icons/1188086.png";
-import Accommodation from "./Assets/icons/5241697.png";
-import Aviation from "./Assets/icons/4230843.png";
-import Construction from "./Assets/icons/2204128.png";
-import FoodServiceIndustry from "./Assets/icons/3575841.png";
-import BuildingCareIndustry from "./Assets/icons/6454118.png";
-import FabricatedMaterialsIndustry from "./Assets/icons/9170887.png";
-import AutomobileMaintenanceIndustry from "./Assets/icons/4879657.png";
-import ShipbuildingAndShipbuilding from "./Assets/icons/7029741.png";
-import IndustrialMachineryManufacturingIndustry from "./Assets/icons/1186305.png";
-import FoodAndBeverageManufacturingIndustry from "./Assets/icons/3572470.png";
-import ElectricalElectronicAndInformationIndustries from "./Assets/icons/3572470.png";
-import NursingCareIndustry from "./Assets/icons/1165491.png";
 
 export const services = [
   {
@@ -204,9 +194,12 @@ export const services = [
     url: NursingCareIndustry,
   },
 ];
+// </ registered service organization>
 
-// Namaste Recuit
+//
+//
 
+// <Namaste Recuit>
 export const NamasteRecruitLayout = [
   {
     id: 1,
@@ -255,9 +248,12 @@ export const NamasteFeatures = [
     body: "Refund Service if you retire within the period specified by us, we will refund a certain amount of money based on our refund policy.",
   },
 ];
+// </Namaste Recuit>
 
 //
-// ABS PAGE
+//
+
+// < ABS PAGE>
 export const ABSLayout = [
   {
     id: 1,
@@ -304,5 +300,25 @@ export const ABSFeatures = [
     id: 5,
     title: "Refund Service",
     body: "Refund Service if you retire within the period specified by us, we will refund a certain amount of money based on our refund policy.",
+  },
+];
+// </ ABS PAGE>
+
+// articles for home page
+export const articles = [
+  {
+    id: 1,
+    title: `FLYYOU Co., Ltd.: Bridging Gaps, Creating Opportunities"`,
+    image: HeroImage,
+  },
+  {
+    id: 2,
+    title: `ABS English: Tailored Learning for Every Student`,
+    image: HeroImage,
+  },
+  {
+    id: 3,
+    title: `Namasute Recruit: Connecting Global Talent and Companies`,
+    image: HeroImage,
   },
 ];
