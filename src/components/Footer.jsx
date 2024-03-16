@@ -41,7 +41,7 @@ const plans = [
   },
 ];
 
-export default function Footer({ pageLang = "en" }) {
+export default function Footer() {
   return (
     <>
       <div className="mt-36"></div>
@@ -62,9 +62,9 @@ export default function Footer({ pageLang = "en" }) {
             >
               <div>
                 <h3 className="text-2xl font-semibold md:text-3xl">
-                  {pageLang === "en" ? title_en : title_jp}
+                  {title_en}
                 </h3>
-                <p>{pageLang === "en" ? description_en : description_jp}</p>
+                <p>{description_en}</p>
               </div>
               <Button type="primary" className="m-0 scale-[.95]">
                 <Link to={link}>{btnText}</Link>
