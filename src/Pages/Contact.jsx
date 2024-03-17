@@ -59,6 +59,8 @@ export default function Contact() {
     alert(formData);
   }
 
+  const arr = [1, 2];
+
   return (
     <main className="bg-black text-white min-h-screen">
       <Header />
@@ -70,28 +72,29 @@ export default function Contact() {
             </h1>
           </div>
 
-          <section className="self-center justify-self-center grid grid-cols-2 gap-2">
-            <div className="flex flex-col items-center justify-center">
-              <img src={x} className="w-full h-full max-w-96" />
-              <p className="text-center text-xl md:text-3xl font-semibold mt-2">
-                Anup Poudel
-              </p>
-              <p className="ea">+977-9856895868</p>
-            </div>
-
-            <div className="flex flex-col items-center justify-center">
-              <img src={x} className="w-full h-full max-w-96" />
-              <p className="text-center text-xl md:text-3xl font-semibold mt-2">
-                Anup Poudel
-              </p>
-              <p className="ea">+977-9856895868</p>
-            </div>
+          <section className="self-center justify-self-center flex flex-col md:flex-row gap-4">
+            {arr.map((ar) => (
+              <div className="flex gap-2 md:flex-col md:items-center md:text-center">
+                <div className="flex-1 md:flex-auto rounded-md md:rounded-full md:aspect-square overflow-hidden md:w-64 group">
+                  <img
+                    src={x}
+                    className="bg-gray-800 group-hover:scale-[1.05] transition-all"
+                  />
+                </div>
+                <div className="flex-1 ">
+                  <h4 className="text-2xl md:text-3xl font-semibold mb-1">
+                    Anup Poudel
+                  </h4>
+                  <p className="">+977-9856895868</p>
+                </div>
+              </div>
+            ))}
           </section>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-self-center my-64">
-          <div>
-            <h1 className=" text-5xl md:text-6xl text-left font-bold">
+          <div className="col-span-2 md:col-span-1">
+            <h1 className="text-5xl md:text-6xl text-left font-bold">
               Let's Talk
             </h1>
             <p className="text-xl opacity-90">

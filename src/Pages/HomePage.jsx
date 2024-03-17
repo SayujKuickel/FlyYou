@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { articles } from "../constants.js";
+import { articles, projects } from "../constants.js";
 
 import Button from "../components/Button.jsx";
 import Projects from "../components/Projects.jsx";
 import Articles from "../components/Articles.jsx";
 import Footer from "../components/Footer.jsx";
+
 import Header from "../components/Header.jsx";
 
 // image
@@ -32,7 +33,7 @@ export default function App() {
             meaningful impact.
           </p>
 
-          <Button type="primary" alignment="center" classNames="mt-10">
+          <Button type="primary" alignment="center" className="mt-10">
             <Link to="/contact">Contact Us</Link>
           </Button>
         </div>
@@ -50,11 +51,11 @@ export default function App() {
           <div className="w-56 h-56 md:w-96 md:h-96  bg-[#FF0010] absolute blur-3xl opacity-50 z-0 rounded-full -bottom-4 right-60"></div>
 
           {/* gradient overlay */}
-          <div className="max-h-[615px] container mx-auto z-20 relative rounded-3xl overflow-hidden ">
+          <div className="max-h-[75vh] container mx-auto  z-20 relative overflow-hidden">
             <img
               src={HeroImage}
               alt="hero-image"
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full lg:mx-auto rounded-md  md:rounded-3xl lg:w-[85%]"
             />
           </div>
         </section>
@@ -78,7 +79,7 @@ export default function App() {
       </section>
 
       {/* supports */}
-      <Projects />
+      <Projects projects={projects} />
 
       <div className="bg-black text-white mt-24 py-10">
         {/* recent articles */}

@@ -1,7 +1,14 @@
-import { Link } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
-import Logo from "../Assets/FlyYouLogo.png";
 import { useState } from "react";
+
+import { Link } from "react-router-dom";
+
+import Logo from "../Assets/FlyYouLogo.png";
+import CrossIcon from "../Assets/icons/cross-nav.svg";
+import BarsIcon from "../Assets/icons/bars-nav.svg";
+
+import { projects } from "../constants";
+
+import PopupMenu from "../components/PopupMenu";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,36 +25,7 @@ export default function Header() {
           Home
         </Link>
 
-        <div
-          className="relative group pb-3 hover:text-white hover:cursor-pointer"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          <p>Project</p>
-          <div
-            className={`absolute w-64   bg-[#141415] top-full left-1/2 -translate-x-1/2 flex flex-col gap-3 px-4 py-2 rounded-md text-[#F9FAFBaa]  ${
-              isHovered
-                ? "block opacity-100 translate-y-0"
-                : "hidden opacity-0 -translate-y-10"
-            } transition-all duration-500 ease-in-out`}
-          >
-            <Link
-              className="hover:text-white"
-              to="/projects/registered_support_organization"
-            >
-              Registered Support Organization
-            </Link>
-            <Link className="hover:text-white" to="/projects/namaste_recruit">
-              Namaste Recruit
-            </Link>
-            <Link
-              className="hover:text-white"
-              to="/projects/abs_english_conversation"
-            >
-              ABS English Conversation
-            </Link>
-          </div>
-        </div>
+        <PopupMenu itemList={projects}>Projects</PopupMenu>
 
         <Link className="hover:text-white" to="/about">
           Company
@@ -61,7 +39,17 @@ export default function Header() {
         className="block md:hidden absolute z-[201] right-4 top-4"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? <FaTimes /> : <FaBars />}
+        {isOpen ? (
+          <img
+            className=" brightness-0 invert w-6 aspect-square"
+            src={CrossIcon}
+          />
+        ) : (
+          <img
+            className=" brightness-0 invert w-6 aspect-square"
+            src={BarsIcon}
+          />
+        )}
       </button>
 
       {/* mobile nav */}
@@ -72,39 +60,7 @@ export default function Header() {
               Home
             </Link>
 
-            <div
-              className="relative group px-3  before:absolute before:w-[20%] before:h-1 before:bg-gradient-to-r from-[#082FB2] to-[#F34213] before:left-1/2 before:-bottom-1 before:-translate-x-1/2 hover:before:w-[80%] before:transition-all hover:text-white"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              <p>Project</p>
-              <div
-                className={`absolute w-64 text-[#F9FAFBaa] bg-black top-1/2 left-full -translate-y-1/2 flex flex-col gap-3 px-4 py-2 rounded-md ${
-                  isHovered
-                    ? "block opacity-100 translate-y-0"
-                    : "hidden opacity-0 -translate-y-10"
-                } transition-all duration-500 ease-in-out`}
-              >
-                <Link
-                  className="hover:text-white"
-                  to="/projects/registered_support_organization"
-                >
-                  Registered Support Organization
-                </Link>
-                <Link
-                  className="hover:text-white"
-                  to="/projects/namaste_recruit"
-                >
-                  Namaste Recruit
-                </Link>
-                <Link
-                  className="hover:text-white"
-                  to="/projects/abs_english_conversation"
-                >
-                  ABS English Conversation
-                </Link>
-              </div>
-            </div>
+            <PopupMenu itemList={projects}>Projects</PopupMenu>
 
             <Link className="hover:text-white" to="/about">
               About

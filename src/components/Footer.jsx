@@ -10,32 +10,23 @@ import { Link } from "react-router-dom";
 const plans = [
   {
     id: 1,
-    title_en: "Curious about our pricing?",
-    title_jp: "料金プランについて知りたいですか？",
-    description_en: "We offer variety of plans. Click Below to contact us.",
-    description_jp:
-      "私たちはさまざまなプランを提供しています。下記をクリックしてご連絡ください。",
+    title: "Curious about our pricing?",
+    description: "We offer variety of plans. Click Below to contact us.",
     link: "/contact",
     btnText: "Contact us",
   },
   {
     id: 2,
-    title_en: "Wanna Know More About Our Company?",
-    title_jp: "当社について詳しく知りたいですか？",
-
-    description_en: "Please Follow the below link to see our company profile.",
-    description_jp: "下記のリンクをクリックして、会社の概要をご覧ください。",
+    title: "Wanna Know More About Our Company?",
+    description: "Please Follow the below link to see our company profile.",
     link: "/about",
     btnText: "Company Profile",
   },
   {
     id: 3,
-    title_en: "Looking for a job?",
-    title_jp: "求人情報をお探しですか？",
-    description_en:
+    title: "Looking for a job?",
+    description:
       "We have various of offerings per your need. Please follow the link to view our offerings.",
-    description_jp:
-      "私たちはあなたのニーズに合ったさまざまなサービスを提供しています。下記のリンクをクリックして、サービス内容をご覧ください。",
     link: "/",
     btnText: "Recruitment",
   },
@@ -46,36 +37,24 @@ export default function Footer() {
     <>
       <div className="mt-36"></div>
       <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-5 my-16">
-        {plans.map(
-          ({
-            id,
-            title_en,
-            description_en,
-            title_jp,
-            description_jp,
-            link,
-            btnText,
-          }) => (
-            <div
-              key={id}
-              className="h-full flex flex-col gap-4 md:gap-8 justify-between"
-            >
-              <div>
-                <h3 className="text-2xl font-semibold md:text-3xl">
-                  {title_en}
-                </h3>
-                <p>{description_en}</p>
-              </div>
-              <Button type="primary" className="m-0 scale-[.95]">
-                <Link to={link}>{btnText}</Link>
-              </Button>
+        {plans.map(({ id, title, description, link, btnText }) => (
+          <div
+            key={id}
+            className="h-full flex flex-col gap-4 md:gap-8 justify-between"
+          >
+            <div>
+              <h3 className="text-2xl font-semibold md:text-3xl">{title}</h3>
+              <p>{description}</p>
             </div>
-          )
-        )}
+            <Button type="primary" className="m-0 scale-[.95]">
+              <Link to={link}>{btnText}</Link>
+            </Button>
+          </div>
+        ))}
       </section>
       {/* FOOTER */}
       <footer>
-        <div className="container mx-auto bg-[#141415] md:rounded-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-3 md:p-6 lg:p-10">
+        <div className="container mx-auto bg-[#141415] md:rounded-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  md:p-6 lg:p-10">
           <div>
             <img src={FlyYouLogo} className="h-16 brightness-0 invert" alt="" />
             <p className="text-[#F9FAFBaa]">Flyyou &copy; All right reserved</p>
@@ -88,28 +67,11 @@ export default function Footer() {
             />
           </div>
 
-          <ul className="flex flex-col gap-3 mt-6 md:mt-0 text-[#F9FAFBaa]">
-            <li>
-              <h2 className="text-2xl font-bold mt-6 md:mt-0 text-white">
-                Quick Links
-              </h2>
-            </li>
-            <li className="hover:text-white">
-              <a href="">Lorem.</a>
-            </li>
-            <li className="hover:text-white">
-              <a href="">Ut?</a>
-            </li>
-            <li className="hover:text-white">
-              <a href="">Nostrum!</a>
-            </li>
-            <li className="hover:text-white">
-              <a href="">Aut.</a>
-            </li>
-            <li className="hover:text-white">
-              <a href="">Quasi.</a>
-            </li>
-          </ul>
+          <div className="flex flex-col gap-3 mt-6 md:mt-0 text-[#F9FAFBaa]">
+            <Link to="/">Home</Link>
+            <Link to="/about">Company</Link>
+            <Link to="/contact">Contact</Link>
+          </div>
 
           <ul className="flex flex-col gap-3 mt-6 md:mt-0 text-[#F9FAFBaa]">
             <li>
