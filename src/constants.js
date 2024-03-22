@@ -1,42 +1,30 @@
-// <registered_support_organicattion>
-import Agriculture from "./Assets/icons/1188086.png";
-import Accommodation from "./Assets/icons/5241697.png";
-import Aviation from "./Assets/icons/4230843.png";
-import Construction from "./Assets/icons/2204128.png";
-import FoodServiceIndustry from "./Assets/icons/3575841.png";
-import BuildingCareIndustry from "./Assets/icons/6454118.png";
-import FabricatedMaterialsIndustry from "./Assets/icons/9170887.png";
-import AutomobileMaintenanceIndustry from "./Assets/icons/4879657.png";
-import ShipbuildingAndShipbuilding from "./Assets/icons/7029741.png";
-import IndustrialMachineryManufacturingIndustry from "./Assets/icons/1186305.png";
-import FoodAndBeverageManufacturingIndustry from "./Assets/icons/3572470.png";
-import ElectricalElectronicAndInformationIndustries from "./Assets/icons/3572470.png";
-import NursingCareIndustry from "./Assets/icons/1165491.png";
-// </ registered_support_organicattion>
-
 import HeroImage from "./Assets/hero-image.jpg";
 
 // <Home page>
+import Projects_IMG_1 from "./Assets/hero-image.jpg";
+import Projects_IMG_2 from "./Assets/hero-image.jpg";
+import Projects_IMG_3 from "./Assets/hero-image.jpg";
+
 export const projects = [
   {
     id: 1,
     title: "Registered Support Organization",
     description: `We speak Chinese, Japanese, English, Hindi and Nepali. We always have more than 100 people registered, so we will select the right person for your company.`,
-    image: HeroImage,
+    image: Projects_IMG_1,
     link: "/projects/registered_support_organization",
   },
   {
     id: 2,
     title: "Namaste Recruit",
     description: `Namasute Recruit is a specialized human resource matching service connecting "foreigners" with "companies seeking foreign talent," with a focus on Nepalese and South Asians. Our goal is to create employment opportunities that align with the company's needs.`,
-    image: HeroImage,
+    image: Projects_IMG_2,
     link: "/projects/namaste_recruit",
   },
   {
     id: 3,
     title: "ABS English Conversation",
     description: `ABS English consists of Filipino instructors experienced in teaching English to Koreans, Taiwanese, Chinese, Vietnamese, and Japanese individuals. We'll match you with a suitable teacher, ensuring that even beginners can learn English comfortably and confidently.`,
-    image: HeroImage,
+    image: Projects_IMG_3,
     link: "/projects/abs_english_conversation",
   },
 ];
@@ -45,25 +33,29 @@ export const projects = [
 //
 //
 
-// <registered_support_organicattion>
+import RSO_IMG_1 from "./Assets/hero-image.jpg";
+import RSO_IMG_2 from "./Assets/hero-image.jpg";
+import RSO_IMG_3 from "./Assets/hero-image.jpg";
+
+// <registered_support_organization>
 export const RSOLayout = [
   {
     id: 1,
     title: "Registered Support Organization",
     description: `When hiring workers with specific skills, for the first specific skill, companies that accept foreigners are required to provide a lot of support to foreigners. This obligation can be outsourced, and the organization that can receive this obligation is called a 'registered support organization'.`,
-    image: HeroImage,
+    image: RSO_IMG_1,
   },
   {
     id: 2,
     title: "Specific Skills",
     description: `From April 2019, 4, it has become possible to accept new foreign human resources with 'specified skills' in industrial fields where labor shortages are serious.`,
-    image: HeroImage,
+    image: RSO_IMG_2,
   },
   {
     id: 3,
     title: "Work Visa",
     description: `There are a total of 19 types of work visas. In particular, 'Technical, Humanities, and International Services' will be the main focus. You can learn mainly what you have learned at university or vocational school.`,
-    image: HeroImage,
+    image: RSO_IMG_3,
   },
 ];
 
@@ -120,6 +112,23 @@ export const RSOFeatures = [
     body: "We will conduct regular interviews with foreigners and their superiors.",
   },
 ];
+
+// </ registered service organization>
+
+// <Serviecs>
+import Agriculture from "./Assets/icons/1188086.png";
+import Accommodation from "./Assets/icons/5241697.png";
+import Aviation from "./Assets/icons/4230843.png";
+import Construction from "./Assets/icons/2204128.png";
+import FoodServiceIndustry from "./Assets/icons/3575841.png";
+import BuildingCareIndustry from "./Assets/icons/6454118.png";
+import AutomobileMaintenanceIndustry from "./Assets/icons/4879657.png";
+import ShipbuildingAndShipbuilding from "./Assets/icons/7029741.png";
+import IndustrialMachineryManufacturingIndustry from "./Assets/icons/1186305.png";
+import FoodAndBeverageManufacturingIndustry from "./Assets/icons/3572470.png";
+import ElectricalElectronicAndInformationIndustries from "./Assets/icons/3572470.png";
+import FabricatedMaterialsIndustry from "./Assets/icons/9170887.png";
+import NursingCareIndustry from "./Assets/icons/1165491.png";
 
 export const services = [
   {
@@ -188,10 +197,14 @@ export const services = [
     url: NursingCareIndustry,
   },
 ];
-// </ registered service organization>
+// </ Serviecs>
 
 //
 //
+
+import Namaste_IMG_1 from "./Assets/hero-image.jpg";
+import Namaste_IMG_2 from "./Assets/hero-image.jpg";
+import Namaste_IMG_3 from "./Assets/hero-image.jpg";
 
 // <Namaste Recuit>
 export const NamasteRecruitLayout = [
@@ -199,19 +212,19 @@ export const NamasteRecruitLayout = [
     id: 1,
     title: "What is Namaste Recruit?",
     description: `Namasute Recruit connects Nepalese and South Asian individuals, often termed 'foreigners,' with companies seeking a diverse workforce. Our mission crafts tailored opportunities for job seekers and employers. We stand out with a fee structure tied to successful recruitment. Namasute Recruit means accessing talent and fostering inclusivity in your career or organization.`,
-    image: HeroImage,
+    image: Namaste_IMG_1,
   },
   {
     id: 2,
     title: "Connecting Foreign Talent with Opportunity",
     description: `Our unwavering commitment lies in the art of crafting employment opportunities that not only match but also exceed the specific wishes, goals, and strategic needs of companies looking to harness the exceptional talents and unique perspectives of foreign human resources.`,
-    image: HeroImage,
+    image: Namaste_IMG_2,
   },
   {
     id: 3,
     title: "Zero-Cost Recruitment Success",
     description: `Our innovative recruitment model centers on a revolutionary zero-cost framework. Companies achieve their hiring goals risk-free until we meet their staffing needs. This approach underscores our dedication to your success, aligning our interests for mutual benefit. This cost-effective strategy empowers you to explore a diverse workforce and global talent pool without upfront expenses.`,
-    image: HeroImage,
+    image: Namaste_IMG_3,
   },
 ];
 
@@ -247,25 +260,29 @@ export const NamasteFeatures = [
 //
 //
 
+import ABS_IMG_1 from "./Assets/hero-image.jpg";
+import ABS_IMG_2 from "./Assets/hero-image.jpg";
+import ABS_IMG_3 from "./Assets/hero-image.jpg";
+
 // < ABS PAGE>
 export const ABSLayout = [
   {
     id: 1,
     title: "What is ABS English?",
     description: `ABS English consists of Filipino instructors who have taught English to Korean, Taiwanese, Chinese, Vietnamese and Japan people. We introduce teachers that are suitable for each student, so even beginners can learn English with peace of mind.`,
-    image: HeroImage,
+    image: ABS_IMG_1,
   },
   {
     id: 2,
     title: "What kind of people are the teachers?",
     description: `ABS English is a distinguished team of highly skilled Filipino teachers who possess a wealth of experience in teaching English to a diverse range of students, including Koreans, Taiwanese, Chinese, Vietnamese, and Japanese individuals. Our dedicated instructors are well-equipped to provide top-notch language education tailored to the unique needs and backgrounds of each learner, ensuring a comprehensive and effective English language learning experience.`,
-    image: HeroImage,
+    image: ABS_IMG_2,
   },
   {
     id: 3,
     title: "What is the atmosphere like in the class?",
     description: `English is a type of communication tool, so I have lessons with the motto of having fun while learning rather than studying.We will thoroughly interview the students before the lesson and select the appropriate teacher.`,
-    image: HeroImage,
+    image: ABS_IMG_3,
   },
 ];
 

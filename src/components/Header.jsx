@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,26 @@ import PopupMenu from "../components/PopupMenu";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+
+  // google translate
+  const googleTranslateElementInit = () => {
+    new window.google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+        autoDisplay: false,
+      },
+      "google_translate_element"
+    );
+  };
+  useEffect(() => {
+    var addScript = document.createElement("script");
+    addScript.setAttribute(
+      "src",
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    );
+    document.body.appendChild(addScript);
+    window.googleTranslateElementInit = googleTranslateElementInit;
+  }, []);
 
   return (
     <header className="container mx-auto flex justify-between items-center p-4 text-xl">
@@ -34,6 +53,8 @@ export default function Header() {
           Contact
         </Link>
       </nav>
+
+      <div id="google_translate_element"></div>
 
       <button
         className="block md:hidden absolute z-[201] right-4 top-4"

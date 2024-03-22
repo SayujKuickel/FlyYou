@@ -2,7 +2,7 @@ export default function Services({ services }) {
   return (
     <ul className="flex flex-wrap justify-center my-10 gap-4 md:gap-8">
       {services.map((service) => (
-        <li className="w-52 aspect-square flex flex-col gap-2">
+        <li key={service.id} className="w-52 aspect-square flex flex-col gap-2">
           <div className="w-full rounded-full bg-gray-800/20 p-2 aspect-square grid place-items-center">
             <img
               src={service.url}
